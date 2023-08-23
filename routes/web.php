@@ -17,10 +17,12 @@ Route::get('/', function () {
     return view('auth.login');
 });
 
+
 Route::resource('articulos','App\Http\Controllers\ArticuloController');
 Route::resource('ventas','App\Http\Controllers\VentaController');
 Route::resource('compras','App\Http\Controllers\CompraController');
 Route::resource('registers','App\Http\Controllers\RegiController');
+Route::resource('users','App\Http\Controllers\UserController');
 
 
 Route::middleware([

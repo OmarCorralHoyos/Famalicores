@@ -7,7 +7,7 @@
 @stop
 
 @section('content')
-<h2>CREAR REGISTROS</h2>
+<h2>INGRESAR NUEVO ARTICULO</h2>
 
 <form action="/articulos" method="POST">
     @csrf

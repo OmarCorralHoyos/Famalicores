@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\models\User;
 
-class RegiController extends Controller
+class UserController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +14,8 @@ class RegiController extends Controller
      */
     public function index()
     {
-        $users = User::all();
-        return view('usuario.index')->with('users',$users);
+        $user = User::all();
+        return view('auth.register')->with('user',$user);
     }
 
     /**
@@ -25,7 +25,7 @@ class RegiController extends Controller
      */
     public function create()
     {
-        
+        //
     }
 
     /**
@@ -36,7 +36,7 @@ class RegiController extends Controller
      */
     public function store(Request $request)
     {
-        
+        //
     }
 
     /**
@@ -70,7 +70,7 @@ class RegiController extends Controller
      */
     public function update(Request $request, $id)
     {
-       
+        //
     }
 
     /**
@@ -81,9 +81,6 @@ class RegiController extends Controller
      */
     public function destroy($id)
     {
-        $user = User::find($id);        
-        $user->delete();
-
-        return redirect('/registers');
+        //
     }
 }

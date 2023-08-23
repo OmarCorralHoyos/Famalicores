@@ -12,7 +12,7 @@
 <a href="compras/create" class="btn btn-primary mb-3">Nueva compra</a>
 
 
-<table id="compras" class="table table-dark table-striped table-bordered shadow-lg mt-4" style="width:100%">
+<table id="compras" class="table table-white table-striped table-bordered shadow-lg mt-4" style="width:100%">
   <thead>
     <tr>
       <th scope="col">ID</th>

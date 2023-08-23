@@ -13,7 +13,8 @@
 <a href="articulos/create" class="btn btn-primary mb-3">Nuevo articulo</a>
 
 
-<table id="art" class="table table-dark table-striped table-bordered shadow-lg mt-4" style="width:100%">
+
+<table id="art" class="table table-white table-striped table-bordered shadow-lg mt-4" style="width:100%">
   <thead>
     <tr>
       <th scope="col">ID</th>

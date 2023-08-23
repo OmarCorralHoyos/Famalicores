@@ -170,7 +170,7 @@ return [
     'classes_auth_card' => 'bg-gradient-dark',
     'classes_auth_header' => '',
     'classes_auth_body' => 'bg-gradient-dark',
-    'classes_auth_footer' => 'd-none',
+    'classes_auth_footer' => '',
     'classes_auth_icon' => 'fa-fw text-light',
     'classes_auth_btn' => 'btn-flat btn-light',
 
@@ -328,19 +328,15 @@ return [
         ],
         [
             'text' => 'Nuevo usuario',
-            'url'  => 'registers',
+            'url'  => 'users',
             'icon' => 'fas fa-fw fa-user',
         ],
         [
             'text' => 'Perfiles',
-            'url'  => 'profiles',
+            'url'  => 'registers',
             'icon' => 'fas fa-fw fa-user',
         ],
-        [
-            'text' => 'Cambiar Contraseña',
-            'url'  => 'admin/settings',
-            'icon' => 'fas fa-fw fa-lock',
-        ],
+        
        
        
     ],

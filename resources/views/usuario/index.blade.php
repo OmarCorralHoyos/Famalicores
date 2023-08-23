@@ -2,46 +2,38 @@
 
 @section('title', 'Dashboard')
 
+
 @section('content_header')
-    <h1><b>Fama</b>Licores | Ventas</h1>
+    <h1><b>Fama</b>Licores | Usuarios</h1>
     
 @stop
 
 @section('content')
      <!-- <div class="shadow-lg p-3 mb-5 bg-white rounded"><h3>Contenido de INDEX</h3></div> -->
-<a href="ventas/create" class="btn btn-primary mb-3">Nueva venta</a>
+<a href="articulos/create" class="btn btn-primary mb-3">Nuevo articulo</a>
 
 
-<table id="ventas" class="table table-white table-striped table-bordered shadow-lg mt-4" style="width:100%">
+<table id="usua" class="table table-dark table-striped table-bordered shadow-lg mt-4" style="width:100%">
   <thead>
     <tr>
       <th scope="col">ID</th>
-      <th scope="col">FECHA DE VENTA</th>
       <th scope="col">ARTICULO</th>
       <th scope="col">CATEGORIA</th>
       <th scope="col">CANTIDAD</th>
-      <th scope="col">PRECIO</th>
-      <th scope="col">TOTAL</th>
       <th scope="col">ACCIONES</th>
     </tr>
   </thead>
   <tbody>    
-    @foreach ($ventas as $venta)
+    @foreach ($users as $user)
     <tr>
-        <td>{{$venta->id}}</td>
-        <td>{{$venta->Fecha_de_venta}}</td>
-        <td>{{$venta->Articulo}}</td>
-        <td>{{$venta->Categoria}}</td>
-        <td>{{$venta->Cantidad}}</td>
-        <td>{{$venta->Precio}}</td>
-        <td>{{$venta->Total}}</td>
+        <td>{{$user->id}}</td>
+        <td>{{$user->name}}</td>
+        <td>{{$user->email}}</td>
+        <td>{{$user->password}}</td>
         <td>
-         <form action="{{ route('ventas.destroy',$venta->id) }}" method="POST">
-          <a href="/ventas/{{$venta->id}}/edit" class="btn btn-info">Editar</a>         
-              @csrf
-              @method('DELETE')
+
           <button type="submit" class="btn btn-danger">Delete</button>
-         </form>          
+           
         </td>        
     </tr>
     @endforeach
@@ -61,11 +53,10 @@
 
 <script>
 $(document).ready(function() {
-    $('#ventas').DataTable({
+    $('#usua').DataTable({
         "lengthMenu": [[5,10, 50, -1], [5, 10, 50, "All"]]
     });
 } );
-</script>
 </script>
 
 @stop

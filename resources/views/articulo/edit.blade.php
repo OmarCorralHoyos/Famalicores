@@ -4,7 +4,7 @@
 
 @section('content_header')
     
-    <h2>EDITAR REGISTROS</h2>
+    <h2>EDITAR ARTICULOS</h2>
 
 <form action="/articulos/{{$articulo->id}}" method="POST">
     @csrf    
