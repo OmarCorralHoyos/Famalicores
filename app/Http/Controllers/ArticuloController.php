@@ -4,9 +4,13 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\models\Articulo;
-
+use PDF;
 class ArticuloController extends Controller
 {
+   public function __construct(){
+    $this->middleware('auth');
+   }
+    
     /**
      * Display a listing of the resource.
      *
@@ -16,6 +20,20 @@ class ArticuloController extends Controller
     {
         $articulos = Articulo::all();
         return view('articulo.index')->with('articulos',$articulos);
+    }
+    public function pdf()
+    {
+        $articulos = Articulo::paginate();
+
+        $pdf = PDF::loadView('articulo.pdf', ['articulos'=>$articulos]);
+        
+        return $pdf->stream();
+
+        //  $articulos = Articulo::paginate();
+        // return view('articulo.pdf')->with('articulos',$articulos);
+
+        
+
     }
 
     /**

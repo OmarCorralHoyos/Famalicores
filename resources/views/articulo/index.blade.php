@@ -11,7 +11,7 @@
 @section('content')
      <!-- <div class="shadow-lg p-3 mb-5 bg-white rounded"><h3>Contenido de INDEX</h3></div> -->
 <a href="articulos/create" class="btn btn-primary mb-3">Nuevo articulo</a>
-
+<a href="articulos/pdf" class="btn btn-danger mb-3 ml-2">PDF</a>
 
 
 <table id="art" class="table table-white table-striped table-bordered shadow-lg mt-4" style="width:100%">

@@ -3,11 +3,10 @@
 @section('title', 'Dashboard')
 
 @section('content_header')
-    <h1><b>Fama</b>Licores</h1>
+<h1><b>Fama</b>Licores | Ingrese nuevo usuario</h1>
 @stop
 
 @section('content')
-<h2>INGRESAR NUEVO USUARIO</h2>
 
 <x-guest-layout >
     <x-jet-authentication-card>
