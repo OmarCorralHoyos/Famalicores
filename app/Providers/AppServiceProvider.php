@@ -26,11 +26,9 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         FacadesSchema::defaultStringLength(191);
-    }
-    {
-        paginator::useBootstrap();
+
         if (config('app.env') === 'production') {
-            URL::forceScheme(scheme:'https');
+            URL::forceScheme('https');
         }
     }
 }
